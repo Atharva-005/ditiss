@@ -1,2 +1,18 @@
 never settle
 
+install docker.io
+docker images
+docker ps -a
+rm container
+rmi hello
+
+nano dockerfile
+FROM debian
+RUN apt-get update
+RUN apt-get install apache2 -y
+COPY../var/www/html/
+EXPOSE 80 
+CMD ["apache2ctl","-D","FOREGROUND 
+
+docker build -t debian:latest .
+run -d --name service -p 8080:80
